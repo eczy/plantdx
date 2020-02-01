@@ -1,0 +1,6 @@
+FROM pytorch/pytorch:1.4-cuda10.1-cudnn7-devel
+
+RUN mkdir /app
+WORKDIR /app
+
+RUN pip install jupyterlab
