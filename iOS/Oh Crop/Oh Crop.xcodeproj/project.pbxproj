@@ -1,0 +1,703 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		75F4CF73691EF5D6CB312C41 /* Pods_Oh_Crop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186D5B4D78221EE74FC7FF43 /* Pods_Oh_Crop.framework */; };
+		8859BB9923E5F8AA0055DBC8 /* TorchModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8859BB9823E5F8AA0055DBC8 /* TorchModule.mm */; };
+		8859BB9D23E603890055DBC8 /* UIImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8859BB9C23E603890055DBC8 /* UIImageHelper.swift */; };
+		8859BBA123E60B1E0055DBC8 /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8859BB9F23E60B1E0055DBC8 /* labels.txt */; };
+		8859BBA223E60C6F0055DBC8 /* model.pt in Resources */ = {isa = PBXBuildFile; fileRef = 8859BB9E23E60B1E0055DBC8 /* model.pt */; };
+		887A9DE223E6CE2400C73528 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887A9DE123E6CE2400C73528 /* ApiClient.swift */; };
+		888B9C1423E5CA790047A207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888B9C1323E5CA790047A207 /* AppDelegate.swift */; };
+		888B9C1623E5CA790047A207 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888B9C1523E5CA790047A207 /* SceneDelegate.swift */; };
+		888B9C1823E5CA790047A207 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888B9C1723E5CA790047A207 /* ContentView.swift */; };
+		888B9C1A23E5CA7B0047A207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 888B9C1923E5CA7B0047A207 /* Assets.xcassets */; };
+		888B9C1D23E5CA7B0047A207 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 888B9C1C23E5CA7B0047A207 /* Preview Assets.xcassets */; };
+		888B9C2023E5CA7B0047A207 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888B9C1E23E5CA7B0047A207 /* LaunchScreen.storyboard */; };
+		888B9C2B23E5CA7B0047A207 /* Oh_CropTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888B9C2A23E5CA7B0047A207 /* Oh_CropTests.swift */; };
+		888B9C3623E5CA7B0047A207 /* Oh_CropUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888B9C3523E5CA7B0047A207 /* Oh_CropUITests.swift */; };
+		888B9C5623E5E92D0047A207 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888B9C5523E5E92D0047A207 /* ImageView.swift */; };
+		888B9C5823E5E9540047A207 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888B9C5723E5E9540047A207 /* ImagePicker.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		888B9C2723E5CA7B0047A207 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 888B9C0823E5CA790047A207 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 888B9C0F23E5CA790047A207;
+			remoteInfo = "Oh Crop";
+		};
+		888B9C3223E5CA7B0047A207 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 888B9C0823E5CA790047A207 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 888B9C0F23E5CA790047A207;
+			remoteInfo = "Oh Crop";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		186D5B4D78221EE74FC7FF43 /* Pods_Oh_Crop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Oh_Crop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		461E6220685D5C349682FB03 /* Pods-Oh Crop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Oh Crop.release.xcconfig"; path = "Target Support Files/Pods-Oh Crop/Pods-Oh Crop.release.xcconfig"; sourceTree = "<group>"; };
+		8859BB9623E5F87A0055DBC8 /* TorchModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TorchModule.h; sourceTree = "<group>"; };
+		8859BB9823E5F8AA0055DBC8 /* TorchModule.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TorchModule.mm; sourceTree = "<group>"; };
+		8859BB9B23E5FC0B0055DBC8 /* Oh Crop-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Oh Crop-Bridging-Header.h"; sourceTree = "<group>"; };
+		8859BB9C23E603890055DBC8 /* UIImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageHelper.swift; sourceTree = "<group>"; };
+		8859BB9E23E60B1E0055DBC8 /* model.pt */ = {isa = PBXFileReference; lastKnownFileType = file; path = model.pt; sourceTree = "<group>"; };
+		8859BB9F23E60B1E0055DBC8 /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels.txt; sourceTree = "<group>"; };
+		887A9DE123E6CE2400C73528 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		888B9C1023E5CA790047A207 /* Oh Crop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Oh Crop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		888B9C1323E5CA790047A207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		888B9C1523E5CA790047A207 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		888B9C1723E5CA790047A207 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		888B9C1923E5CA7B0047A207 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		888B9C1C23E5CA7B0047A207 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		888B9C1F23E5CA7B0047A207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		888B9C2123E5CA7B0047A207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		888B9C2623E5CA7B0047A207 /* Oh CropTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Oh CropTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		888B9C2A23E5CA7B0047A207 /* Oh_CropTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oh_CropTests.swift; sourceTree = "<group>"; };
+		888B9C2C23E5CA7B0047A207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		888B9C3123E5CA7B0047A207 /* Oh CropUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Oh CropUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		888B9C3523E5CA7B0047A207 /* Oh_CropUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oh_CropUITests.swift; sourceTree = "<group>"; };
+		888B9C3723E5CA7B0047A207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		888B9C5523E5E92D0047A207 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		888B9C5723E5E9540047A207 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		8AA707667A84B7FBD2E30074 /* Pods-Oh Crop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Oh Crop.debug.xcconfig"; path = "Target Support Files/Pods-Oh Crop/Pods-Oh Crop.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		888B9C0D23E5CA790047A207 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75F4CF73691EF5D6CB312C41 /* Pods_Oh_Crop.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		888B9C2323E5CA7B0047A207 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		888B9C2E23E5CA7B0047A207 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8859BB9523E5F8200055DBC8 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				8859BB9F23E60B1E0055DBC8 /* labels.txt */,
+				8859BB9E23E60B1E0055DBC8 /* model.pt */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		8859BB9723E5F88F0055DBC8 /* TorchBridge */ = {
+			isa = PBXGroup;
+			children = (
+				8859BB9623E5F87A0055DBC8 /* TorchModule.h */,
+				8859BB9823E5F8AA0055DBC8 /* TorchModule.mm */,
+				8859BB9B23E5FC0B0055DBC8 /* Oh Crop-Bridging-Header.h */,
+			);
+			path = TorchBridge;
+			sourceTree = "<group>";
+		};
+		888B9C0723E5CA790047A207 = {
+			isa = PBXGroup;
+			children = (
+				888B9C1223E5CA790047A207 /* Oh Crop */,
+				888B9C2923E5CA7B0047A207 /* Oh CropTests */,
+				888B9C3423E5CA7B0047A207 /* Oh CropUITests */,
+				888B9C1123E5CA790047A207 /* Products */,
+				9BC45A10D4854B7021EC9058 /* Pods */,
+				9D8C101E8CE600C54D85458C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		888B9C1123E5CA790047A207 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				888B9C1023E5CA790047A207 /* Oh Crop.app */,
+				888B9C2623E5CA7B0047A207 /* Oh CropTests.xctest */,
+				888B9C3123E5CA7B0047A207 /* Oh CropUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		888B9C1223E5CA790047A207 /* Oh Crop */ = {
+			isa = PBXGroup;
+			children = (
+				8859BB9723E5F88F0055DBC8 /* TorchBridge */,
+				8859BB9523E5F8200055DBC8 /* model */,
+				888B9C1323E5CA790047A207 /* AppDelegate.swift */,
+				888B9C1523E5CA790047A207 /* SceneDelegate.swift */,
+				888B9C1723E5CA790047A207 /* ContentView.swift */,
+				888B9C1923E5CA7B0047A207 /* Assets.xcassets */,
+				888B9C1E23E5CA7B0047A207 /* LaunchScreen.storyboard */,
+				888B9C2123E5CA7B0047A207 /* Info.plist */,
+				888B9C1B23E5CA7B0047A207 /* Preview Content */,
+				888B9C5523E5E92D0047A207 /* ImageView.swift */,
+				888B9C5723E5E9540047A207 /* ImagePicker.swift */,
+				8859BB9C23E603890055DBC8 /* UIImageHelper.swift */,
+				887A9DE123E6CE2400C73528 /* ApiClient.swift */,
+			);
+			path = "Oh Crop";
+			sourceTree = "<group>";
+		};
+		888B9C1B23E5CA7B0047A207 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				888B9C1C23E5CA7B0047A207 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		888B9C2923E5CA7B0047A207 /* Oh CropTests */ = {
+			isa = PBXGroup;
+			children = (
+				888B9C2A23E5CA7B0047A207 /* Oh_CropTests.swift */,
+				888B9C2C23E5CA7B0047A207 /* Info.plist */,
+			);
+			path = "Oh CropTests";
+			sourceTree = "<group>";
+		};
+		888B9C3423E5CA7B0047A207 /* Oh CropUITests */ = {
+			isa = PBXGroup;
+			children = (
+				888B9C3523E5CA7B0047A207 /* Oh_CropUITests.swift */,
+				888B9C3723E5CA7B0047A207 /* Info.plist */,
+			);
+			path = "Oh CropUITests";
+			sourceTree = "<group>";
+		};
+		9BC45A10D4854B7021EC9058 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8AA707667A84B7FBD2E30074 /* Pods-Oh Crop.debug.xcconfig */,
+				461E6220685D5C349682FB03 /* Pods-Oh Crop.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9D8C101E8CE600C54D85458C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				186D5B4D78221EE74FC7FF43 /* Pods_Oh_Crop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		888B9C0F23E5CA790047A207 /* Oh Crop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 888B9C3A23E5CA7B0047A207 /* Build configuration list for PBXNativeTarget "Oh Crop" */;
+			buildPhases = (
+				040434FBB1C7E71266D12F17 /* [CP] Check Pods Manifest.lock */,
+				888B9C0C23E5CA790047A207 /* Sources */,
+				888B9C0D23E5CA790047A207 /* Frameworks */,
+				888B9C0E23E5CA790047A207 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Oh Crop";
+			productName = "Oh Crop";
+			productReference = 888B9C1023E5CA790047A207 /* Oh Crop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		888B9C2523E5CA7B0047A207 /* Oh CropTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 888B9C3D23E5CA7B0047A207 /* Build configuration list for PBXNativeTarget "Oh CropTests" */;
+			buildPhases = (
+				888B9C2223E5CA7B0047A207 /* Sources */,
+				888B9C2323E5CA7B0047A207 /* Frameworks */,
+				888B9C2423E5CA7B0047A207 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				888B9C2823E5CA7B0047A207 /* PBXTargetDependency */,
+			);
+			name = "Oh CropTests";
+			productName = "Oh CropTests";
+			productReference = 888B9C2623E5CA7B0047A207 /* Oh CropTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		888B9C3023E5CA7B0047A207 /* Oh CropUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 888B9C4023E5CA7B0047A207 /* Build configuration list for PBXNativeTarget "Oh CropUITests" */;
+			buildPhases = (
+				888B9C2D23E5CA7B0047A207 /* Sources */,
+				888B9C2E23E5CA7B0047A207 /* Frameworks */,
+				888B9C2F23E5CA7B0047A207 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				888B9C3323E5CA7B0047A207 /* PBXTargetDependency */,
+			);
+			name = "Oh CropUITests";
+			productName = "Oh CropUITests";
+			productReference = 888B9C3123E5CA7B0047A207 /* Oh CropUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		888B9C0823E5CA790047A207 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Evan Czyzycki";
+				TargetAttributes = {
+					888B9C0F23E5CA790047A207 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					888B9C2523E5CA7B0047A207 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 888B9C0F23E5CA790047A207;
+					};
+					888B9C3023E5CA7B0047A207 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 888B9C0F23E5CA790047A207;
+					};
+				};
+			};
+			buildConfigurationList = 888B9C0B23E5CA790047A207 /* Build configuration list for PBXProject "Oh Crop" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 888B9C0723E5CA790047A207;
+			productRefGroup = 888B9C1123E5CA790047A207 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				888B9C0F23E5CA790047A207 /* Oh Crop */,
+				888B9C2523E5CA7B0047A207 /* Oh CropTests */,
+				888B9C3023E5CA7B0047A207 /* Oh CropUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		888B9C0E23E5CA790047A207 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				888B9C2023E5CA7B0047A207 /* LaunchScreen.storyboard in Resources */,
+				888B9C1D23E5CA7B0047A207 /* Preview Assets.xcassets in Resources */,
+				8859BBA123E60B1E0055DBC8 /* labels.txt in Resources */,
+				888B9C1A23E5CA7B0047A207 /* Assets.xcassets in Resources */,
+				8859BBA223E60C6F0055DBC8 /* model.pt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		888B9C2423E5CA7B0047A207 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		888B9C2F23E5CA7B0047A207 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		040434FBB1C7E71266D12F17 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Oh Crop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		888B9C0C23E5CA790047A207 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				888B9C5623E5E92D0047A207 /* ImageView.swift in Sources */,
+				888B9C1423E5CA790047A207 /* AppDelegate.swift in Sources */,
+				8859BB9923E5F8AA0055DBC8 /* TorchModule.mm in Sources */,
+				887A9DE223E6CE2400C73528 /* ApiClient.swift in Sources */,
+				888B9C5823E5E9540047A207 /* ImagePicker.swift in Sources */,
+				888B9C1623E5CA790047A207 /* SceneDelegate.swift in Sources */,
+				888B9C1823E5CA790047A207 /* ContentView.swift in Sources */,
+				8859BB9D23E603890055DBC8 /* UIImageHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		888B9C2223E5CA7B0047A207 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				888B9C2B23E5CA7B0047A207 /* Oh_CropTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		888B9C2D23E5CA7B0047A207 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				888B9C3623E5CA7B0047A207 /* Oh_CropUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		888B9C2823E5CA7B0047A207 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 888B9C0F23E5CA790047A207 /* Oh Crop */;
+			targetProxy = 888B9C2723E5CA7B0047A207 /* PBXContainerItemProxy */;
+		};
+		888B9C3323E5CA7B0047A207 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 888B9C0F23E5CA790047A207 /* Oh Crop */;
+			targetProxy = 888B9C3223E5CA7B0047A207 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		888B9C1E23E5CA7B0047A207 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				888B9C1F23E5CA7B0047A207 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		888B9C3823E5CA7B0047A207 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		888B9C3923E5CA7B0047A207 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		888B9C3B23E5CA7B0047A207 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AA707667A84B7FBD2E30074 /* Pods-Oh Crop.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Oh Crop/Preview Content\"";
+				DEVELOPMENT_TEAM = 2UBD5GPA87;
+				ENABLE_BITCODE = NO;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Oh Crop/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Evan-Czyzycki.Oh-Crop";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Oh Crop/TorchBridge/Oh Crop-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		888B9C3C23E5CA7B0047A207 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 461E6220685D5C349682FB03 /* Pods-Oh Crop.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Oh Crop/Preview Content\"";
+				DEVELOPMENT_TEAM = 2UBD5GPA87;
+				ENABLE_BITCODE = NO;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Oh Crop/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Evan-Czyzycki.Oh-Crop";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Oh Crop/TorchBridge/Oh Crop-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		888B9C3E23E5CA7B0047A207 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2UBD5GPA87;
+				INFOPLIST_FILE = "Oh CropTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Evan-Czyzycki.Oh-CropTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Oh Crop.app/Oh Crop";
+			};
+			name = Debug;
+		};
+		888B9C3F23E5CA7B0047A207 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2UBD5GPA87;
+				INFOPLIST_FILE = "Oh CropTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Evan-Czyzycki.Oh-CropTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Oh Crop.app/Oh Crop";
+			};
+			name = Release;
+		};
+		888B9C4123E5CA7B0047A207 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2UBD5GPA87;
+				INFOPLIST_FILE = "Oh CropUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Evan-Czyzycki.Oh-CropUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Oh Crop";
+			};
+			name = Debug;
+		};
+		888B9C4223E5CA7B0047A207 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2UBD5GPA87;
+				INFOPLIST_FILE = "Oh CropUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Evan-Czyzycki.Oh-CropUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Oh Crop";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		888B9C0B23E5CA790047A207 /* Build configuration list for PBXProject "Oh Crop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				888B9C3823E5CA7B0047A207 /* Debug */,
+				888B9C3923E5CA7B0047A207 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		888B9C3A23E5CA7B0047A207 /* Build configuration list for PBXNativeTarget "Oh Crop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				888B9C3B23E5CA7B0047A207 /* Debug */,
+				888B9C3C23E5CA7B0047A207 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		888B9C3D23E5CA7B0047A207 /* Build configuration list for PBXNativeTarget "Oh CropTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				888B9C3E23E5CA7B0047A207 /* Debug */,
+				888B9C3F23E5CA7B0047A207 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		888B9C4023E5CA7B0047A207 /* Build configuration list for PBXNativeTarget "Oh CropUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				888B9C4123E5CA7B0047A207 /* Debug */,
+				888B9C4223E5CA7B0047A207 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 888B9C0823E5CA790047A207 /* Project object */;
+}
