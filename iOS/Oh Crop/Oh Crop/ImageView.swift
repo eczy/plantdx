@@ -12,7 +12,11 @@ struct ImageView: View {
     
     @State var showCameraView = false
     @State var showImagePicker = false
-    @State var UserImage: UIImage = UIImage()
+    @State var UserImage: UIImage = UIImage() {
+        didSet {
+            print("Image changed!")
+        }
+    }
     @State var text: String = ""
     @State var useCamera = false
     
@@ -43,7 +47,7 @@ struct ImageView: View {
             return
         }
         let zippedResults = zip(labels.indices, outputs)
-        let sortedResults = zippedResults.sorted { $0.1.floatValue > $1.1.floatValue }.prefix(1)
+        let sortedResults = zippedResults.sorted { $0.1.floatValue > $1.1.floatValue }.prefix(3)
         var text = ""
         for result in sortedResults {
             let prob = String(format: "%.2f", result.1.floatValue)
@@ -56,9 +60,10 @@ struct ImageView: View {
         VStack {
             Image(uiImage: UserImage)
                 .resizable()
-                .scaledToFill()
+                .scaledToFit()
                 .background(Color.gray)
                 .clipped()
+                .padding(20)
             HStack {
                 Spacer()
                 Button(action: {
@@ -74,12 +79,13 @@ struct ImageView: View {
                 }) {
                     Text("Take picture")
                 }
+                .disabled(!UIImagePickerController.isSourceTypeAvailable(.camera))
                 Spacer()
             }
             .padding(.top, 10)
             Button(action: self.classifyImage) {
                 Text("Classify")
-            }
+            }.padding(.top, 20)
             Text(self.text)
         }
         .sheet(isPresented: $showImagePicker) {
