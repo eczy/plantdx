@@ -12,6 +12,7 @@
 		8859BB9D23E603890055DBC8 /* UIImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8859BB9C23E603890055DBC8 /* UIImageHelper.swift */; };
 		8859BBA123E60B1E0055DBC8 /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8859BB9F23E60B1E0055DBC8 /* labels.txt */; };
 		8859BBA223E60C6F0055DBC8 /* model.pt in Resources */ = {isa = PBXBuildFile; fileRef = 8859BB9E23E60B1E0055DBC8 /* model.pt */; };
+		887A9DE223E6CE2400C73528 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887A9DE123E6CE2400C73528 /* ApiClient.swift */; };
 		888B9C1423E5CA790047A207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888B9C1323E5CA790047A207 /* AppDelegate.swift */; };
 		888B9C1623E5CA790047A207 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888B9C1523E5CA790047A207 /* SceneDelegate.swift */; };
 		888B9C1823E5CA790047A207 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888B9C1723E5CA790047A207 /* ContentView.swift */; };
@@ -50,6 +51,7 @@
 		8859BB9C23E603890055DBC8 /* UIImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageHelper.swift; sourceTree = "<group>"; };
 		8859BB9E23E60B1E0055DBC8 /* model.pt */ = {isa = PBXFileReference; lastKnownFileType = file; path = model.pt; sourceTree = "<group>"; };
 		8859BB9F23E60B1E0055DBC8 /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels.txt; sourceTree = "<group>"; };
+		887A9DE123E6CE2400C73528 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		888B9C1023E5CA790047A207 /* Oh Crop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Oh Crop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		888B9C1323E5CA790047A207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		888B9C1523E5CA790047A207 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				888B9C5523E5E92D0047A207 /* ImageView.swift */,
 				888B9C5723E5E9540047A207 /* ImagePicker.swift */,
 				8859BB9C23E603890055DBC8 /* UIImageHelper.swift */,
+				887A9DE123E6CE2400C73528 /* ApiClient.swift */,
 			);
 			path = "Oh Crop";
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				888B9C5623E5E92D0047A207 /* ImageView.swift in Sources */,
 				888B9C1423E5CA790047A207 /* AppDelegate.swift in Sources */,
 				8859BB9923E5F8AA0055DBC8 /* TorchModule.mm in Sources */,
+				887A9DE223E6CE2400C73528 /* ApiClient.swift in Sources */,
 				888B9C5823E5E9540047A207 /* ImagePicker.swift in Sources */,
 				888B9C1623E5CA790047A207 /* SceneDelegate.swift in Sources */,
 				888B9C1823E5CA790047A207 /* ContentView.swift in Sources */,

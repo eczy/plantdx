@@ -47,13 +47,53 @@ struct ImageView: View {
             return
         }
         let zippedResults = zip(labels.indices, outputs)
-        let sortedResults = zippedResults.sorted { $0.1.floatValue > $1.1.floatValue }.prefix(3)
+        let sortedResults = zippedResults.sorted { $0.1.floatValue > $1.1.floatValue }.prefix(1)
         var text = ""
         for result in sortedResults {
-            let prob = String(format: "%.2f", result.1.floatValue)
-            text += "\u{2022} \(labels[result.0]) - \(prob) \n\n"
+            let prob = String(format: "%.2f", result.1.floatValue * 100)
+            text += "\(labels[result.0]) - \(prob)% \n\n"
         }
         self.text = text
+        
+        var disease_name = labels[sortedResults[0].0].split(separator: ":")[1]
+        disease_name.removeFirst()
+        let json: [String: Any] = [
+            "disease_name": disease_name
+//            "locale": String(Locale.current.languageCode!),
+//            "timestamp": Date().timeIntervalSinceReferenceDate
+        ]
+        let jsonData = try! JSONSerialization.data(withJSONObject: json) as Data
+        if let jsonString = String(data: jsonData, encoding: .utf8) {
+            print(jsonString)
+        }
+        ApiClient.shared.post(url: URL(string: "https://us-central1-hacksc2020-267002.cloudfunctions.net/gcf_hacksc/hacksc_http")!, body: jsonData) {
+            data, response, error in
+            
+            if error != nil || data == nil {
+                print("Client error!")
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
+                print("Server error!")
+                return
+            }
+            
+//            guard let mime = response.mimeType, mime == "application/json" else {
+//                print("Wrong MIME type!")
+//                return
+//            }
+            
+            do {
+                let json = try JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+                if let treatments = json["treatments"] as? [String] {
+                    self.text += "\nTreatment: \n" + treatments[0]
+                }
+            } catch {
+                print("JSON error: \(error.localizedDescription)")
+            }
+            
+        }
     }
     
     var body: some View {
@@ -72,6 +112,7 @@ struct ImageView: View {
                 }) {
                     Text("Choose picture")
                 }
+                .padding()
                 Spacer()
                 Button(action: {
                     self.useCamera = true
@@ -79,13 +120,16 @@ struct ImageView: View {
                 }) {
                     Text("Take picture")
                 }
+                .padding()
                 .disabled(!UIImagePickerController.isSourceTypeAvailable(.camera))
                 Spacer()
             }
-            .padding(.top, 10)
+            .padding(10)
             Button(action: self.classifyImage) {
                 Text("Classify")
-            }.padding(.top, 20)
+            }
+            .padding(20)
+            
             Text(self.text)
         }
         .sheet(isPresented: $showImagePicker) {
@@ -93,9 +137,9 @@ struct ImageView: View {
         }
     }
 }
-    
-    struct ImageView_Previews: PreviewProvider {
-        static var previews: some View {
-            ImageView()
-        }
+
+struct ImageView_Previews: PreviewProvider {
+    static var previews: some View {
+        ImageView()
+    }
 }

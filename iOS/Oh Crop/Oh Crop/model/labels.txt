@@ -9,30 +9,30 @@ Corn: Cercospora leaf spot, Gray leaf spot
 Corn: Common rust
 Corn: Northern Leaf Blight
 Corn: healthy
-Grape: Black_rot
-Grape: Esca_(Black_Measles)
-Grape: Leaf_blight_(Isariopsis_Leaf_Spot)
+Grape: Black rot
+Grape: Esca (Black Measles)
+Grape: Leaf blight (Isariopsis Leaf Spot)
 Grape: healthy
-Orange: Haunglongbing_(Citrus_greening)
-Peach: Bacterial_spot'
+Orange: Haunglongbing (Citrus greening)
+Peach: Bacterial spot'
 Peach: healthy
-Pepper bell: Bacterial_spot
-Pepper bell: healthy
-Potato: Early_blight
-Potato: Late_blight
+Bell pepper: Bacterial spot
+Bell pepper: healthy
+Potato: Early blight
+Potato: Late blight
 Potato: healthy
 Raspberry: healthy
 Soybean: healthy
-Squash: Powdery_mildew
-Strawberry: Leaf_scorch
+Squash: Powdery mildew
+Strawberry: Leaf scorch
 Strawberry: healthy
-Tomato: Bacterial_spot
-Tomato: Early_blight
-Tomato: Late_blight
-Tomato: Leaf_Mold
-Tomato: Septoria_leaf_spot
-Tomato: Spider_mites, Two-spotted_spider_mite
+Tomato: Bacterial spot
+Tomato: Early blight
+Tomato: Late blight
+Tomato: Leaf Mold
+Tomato: Septoria leaf spot
+Tomato: Spider_mites, Two-spotted spider mite
 Tomato: Target_Spot
-Tomato: Tomato_Yellow_Leaf_Curl_Virus
-Tomato: Tomato_mosaic_virus
+Tomato: Tomato Yellow Leaf Curl Virus
+Tomato: Tomato mosaic virus
 Tomato: healthy
