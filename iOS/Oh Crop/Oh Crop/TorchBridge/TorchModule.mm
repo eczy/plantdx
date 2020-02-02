@@ -35,7 +35,7 @@
       return nil;
     }
     NSMutableArray* results = [[NSMutableArray alloc] init];
-    for (int i = 0; i < 1000; i++) {
+    for (int i = 0; i < 38; i++) {
       [results addObject:@(floatBuffer[i])];
     }
     return [results copy];

@@ -11,7 +11,8 @@ import SwiftUI
 struct ImagePicker: UIViewControllerRepresentable {
     
     @Binding var showImagePicker: Bool
-    @Binding var pickedImage: Image
+    @Binding var pickedImage: UIImage
+    @Binding var useCamera: Bool
     
     func makeCoordinator() -> ImagePicker.Coordinator {
         Coordinator(self)
@@ -20,7 +21,7 @@ struct ImagePicker: UIViewControllerRepresentable {
     func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = context.coordinator
-        if UIImagePickerController.isSourceTypeAvailable(.camera){
+        if UIImagePickerController.isSourceTypeAvailable(.camera) && $useCamera.wrappedValue {
         imagePicker.sourceType = .camera
         } else {
             imagePicker.sourceType = .photoLibrary
@@ -42,7 +43,7 @@ struct ImagePicker: UIViewControllerRepresentable {
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             let uiImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-            parent.pickedImage = Image(uiImage: uiImage)
+            parent.pickedImage = uiImage
             parent.showImagePicker = false
         }
         
@@ -50,7 +51,6 @@ struct ImagePicker: UIViewControllerRepresentable {
             parent.showImagePicker = false
         }
     }
-    
 }
 //
 //struct ImagePicker_Previews: PreviewProvider {

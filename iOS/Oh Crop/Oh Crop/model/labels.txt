@@ -1,0 +1,38 @@
+Apple: Apple scab
+Apple: Black rot
+Apple: Cedar apple rust
+Apple: healthy
+Blueberry: healthy
+Cherry: Powdery_mildew
+Cherry: healthy
+Corn: Cercospora leaf spot, Gray leaf spot
+Corn: Common rust
+Corn: Northern Leaf Blight
+Corn: healthy
+Grape: Black_rot
+Grape: Esca_(Black_Measles)
+Grape: Leaf_blight_(Isariopsis_Leaf_Spot)
+Grape: healthy
+Orange: Haunglongbing_(Citrus_greening)
+Peach: Bacterial_spot'
+Peach: healthy
+Pepper bell: Bacterial_spot
+Pepper bell: healthy
+Potato: Early_blight
+Potato: Late_blight
+Potato: healthy
+Raspberry: healthy
+Soybean: healthy
+Squash: Powdery_mildew
+Strawberry: Leaf_scorch
+Strawberry: healthy
+Tomato: Bacterial_spot
+Tomato: Early_blight
+Tomato: Late_blight
+Tomato: Leaf_Mold
+Tomato: Septoria_leaf_spot
+Tomato: Spider_mites, Two-spotted_spider_mite
+Tomato: Target_Spot
+Tomato: Tomato_Yellow_Leaf_Curl_Virus
+Tomato: Tomato_mosaic_virus
+Tomato: healthy

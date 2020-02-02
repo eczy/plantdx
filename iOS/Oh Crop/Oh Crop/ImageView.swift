@@ -12,9 +12,11 @@ struct ImageView: View {
     
     @State var showCameraView = false
     @State var showImagePicker = false
-    @State var UserImage = Image("user")
+    @State var UserImage: UIImage = UIImage()
+    @State var text: String = ""
+    @State var useCamera = false
     
-    private lazy var module: TorchModule = {
+    private var module: TorchModule = {
         if let filePath = Bundle.main.path(forResource: "model", ofType: "pt"),
             let module = TorchModule(fileAtPath: filePath) {
             return module
@@ -23,8 +25,8 @@ struct ImageView: View {
         }
     }()
     
-    private lazy var labels: [String] = {
-        if let filePath = Bundle.main.path(forResource: "words", ofType: "txt"),
+    private var labels: [String] = {
+        if let filePath = Bundle.main.path(forResource: "labels", ofType: "txt"),
             let labels = try? String(contentsOfFile: filePath) {
             return labels.components(separatedBy: .newlines)
         } else {
@@ -32,24 +34,57 @@ struct ImageView: View {
         }
     }()
     
+    func classifyImage(){
+        let resizedImage = $UserImage.wrappedValue.resized(to: CGSize(width: 224, height: 224))
+        guard var pixelBuffer = resizedImage.normalized() else {
+            return
+        }
+        guard let outputs = module.predict(image: UnsafeMutableRawPointer(&pixelBuffer)) else {
+            return
+        }
+        let zippedResults = zip(labels.indices, outputs)
+        let sortedResults = zippedResults.sorted { $0.1.floatValue > $1.1.floatValue }.prefix(1)
+        var text = ""
+        for result in sortedResults {
+            let prob = String(format: "%.2f", result.1.floatValue)
+            text += "\u{2022} \(labels[result.0]) - \(prob) \n\n"
+        }
+        self.text = text
+    }
+    
     var body: some View {
         VStack {
-            UserImage
+            Image(uiImage: UserImage)
                 .resizable()
-                .frame(width: 200, height: 200)
-                .scaledToFit()
+                .scaledToFill()
                 .background(Color.gray)
-//                .cornerRadius(200)
                 .clipped()
-            Button(action: {self.showImagePicker = true}) {
-                Text("Choose from camera roll")
+            HStack {
+                Spacer()
+                Button(action: {
+                    self.useCamera = false
+                    self.showImagePicker = true
+                }) {
+                    Text("Choose picture")
+                }
+                Spacer()
+                Button(action: {
+                    self.useCamera = true
+                    self.showImagePicker = true
+                }) {
+                    Text("Take picture")
+                }
+                Spacer()
             }
             .padding(.top, 10)
+            Button(action: self.classifyImage) {
+                Text("Classify")
+            }
+            Text(self.text)
         }
         .sheet(isPresented: $showImagePicker) {
-            ImagePicker(showImagePicker: self.$showImagePicker, pickedImage: self.$UserImage)
+            ImagePicker(showImagePicker: self.$showImagePicker, pickedImage: self.$UserImage, useCamera: self.$useCamera)
         }
-        
     }
 }
     
